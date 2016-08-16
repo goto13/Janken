@@ -11,7 +11,8 @@ namespace CSharpJanken.Game2.Players
         /// <see cref="UserPlayer"/>のコンストラクタ
         /// </summary>
         /// <param name="name">ユーザ名</param>
-        public UserPlayer(string name) : base(name, PlayerType.User)
+        public UserPlayer(string name)
+            : base(name, PlayerType.User)
         {
         }
 

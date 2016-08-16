@@ -23,7 +23,7 @@
         /// <summary>
         /// 手の文字列表現
         /// </summary>
-        public readonly string Str;
+        private readonly string str;
 
         /// <summary>
         /// constructor
@@ -31,7 +31,7 @@
         /// <param name="str">手の文字列表現</param>
         private Hands(string str)
         {
-            Str = str;
+            this.str = str;
         }
 
         /// <summary>
@@ -40,7 +40,7 @@
         /// <returns>文字列表現</returns>
         public override string ToString()
         {
-            return Str;
+            return str;
         }
     }
 }

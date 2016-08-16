@@ -83,12 +83,12 @@ namespace CSharpJanken.Game2.Results
                 catch (ObjectDisposedException e)
                 {
                     Console.WriteLine(e.StackTrace);
-                    throw e;
+                    throw;
                 }
                 catch (IOException e)
                 {
                     Console.WriteLine(e.StackTrace);
-                    throw e;
+                    throw;
                 }
             }
         }
@@ -170,12 +170,12 @@ namespace CSharpJanken.Game2.Results
                     catch (OutOfMemoryException e)
                     {
                         Console.WriteLine(e.StackTrace);
-                        throw e;
+                        throw;
                     }
                     catch (IOException e)
                     {
                         Console.WriteLine(e.StackTrace);
-                        throw e;
+                        throw;
                     }
 
                     if (line == null)
@@ -195,7 +195,6 @@ namespace CSharpJanken.Game2.Results
                     resultSummaries.Add(values[0], new ResultSummary(values[0], winsL, losesL));
                 }
             }
-            Console.WriteLine("test");
         }
 
         /// <summary>

@@ -21,7 +21,8 @@ namespace CSharpJanken.Game2
             do
             {
                 Game(players);
-            } while (NextGame());
+            }
+            while (NextGame());
             ShowEndMessage();
         }
 
@@ -58,9 +59,10 @@ namespace CSharpJanken.Game2
         /// <returns>ユーザプレイヤーの人数</returns>
         private int InitUserNums(int playerNums)
         {
+            // playerNumsの値の範囲は2-5
             var input = ValidateInput(
-                $"手入力するユーザは何人ですか？ 0～{playerNums}の整数を入力してください。",
-                @"^\d$",
+                $"手入力するユーザは何人ですか？ 0～{playerNums}の整数を入力してください。(※数字は半角で入力してください)",
+                @"^[0-5]$",
                 $"0～{playerNums}以外の整数が入力されました。");
             var userNums = int.Parse(input);
             if (userNums < 0 || playerNums < userNums)
@@ -156,8 +158,8 @@ namespace CSharpJanken.Game2
         private int InitPlayerNums()
         {
             var input = ValidateInput(
-                "何人でプレイしますか？ 2~5の整数を入力してください。",
-                @"^\d$",
+                "何人でプレイしますか？ 2~5の整数を入力してください。(※数字は半角で入力してください)",
+                @"^[2-5]$",
                 "2~5の整数以外が入力されました。");
             var playerNums = int.Parse(input);
 
@@ -201,8 +203,8 @@ namespace CSharpJanken.Game2
         private int InitGameCounts()
         {
             var input = ValidateInput(
-                "何回プレイしますか？ 1-99の範囲の整数を入力してください。",
-                @"^\d{1,2}$",
+                "何回プレイしますか？ 1-99の範囲の整数を入力してください。(※数字は半角で入力してください)",
+                @"^[1-9][0-9]?$",
                 "整数以外が入力されました。");
             var counts = int.Parse(input);
 

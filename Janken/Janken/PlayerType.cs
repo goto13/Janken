@@ -24,7 +24,7 @@ namespace CSharpJanken.Game2.Players
         /// <summary>
         /// プレイヤー種別の文字列表現
         /// </summary>
-        public readonly string Str;
+        private readonly string str;
 
         /// <summary>
         /// コンストラクタ
@@ -32,7 +32,7 @@ namespace CSharpJanken.Game2.Players
         /// <param name="str">プレイヤー種別の文字列表現</param>
         private PlayerType(string str)
         {
-            Str = str;
+            this.str = str;
         }
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace CSharpJanken.Game2.Players
         /// <returns>文字列表現</returns>
         public override string ToString()
         {
-            return Str;
+            return str;
         }
     }
 }

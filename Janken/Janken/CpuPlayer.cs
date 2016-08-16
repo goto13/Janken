@@ -9,7 +9,8 @@
         /// コンストラクタ
         /// </summary>
         /// <param name="name">CPU名</param>
-        public CpuPlayer(string name) : base(name, PlayerType.Cpu)
+        public CpuPlayer(string name)
+            : base(name, PlayerType.Cpu)
         {
         }
 
